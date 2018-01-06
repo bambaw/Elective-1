@@ -1,0 +1,40 @@
+$(document).ready(function(){
+    var condition = 0;
+	$('#btnshow').on('click',function(){
+     	$('.table-data').show();
+     	$('#btnshow').hide();
+     	$('#btnhide').show();
+        $('#form').hide();
+        $('#title-button').show();
+    });
+    $('#btnhide').on('click',function(){
+     	$('.table-data').hide();
+     	$('#btnhide').hide();
+     	$('#btnshow').show();      	
+    });
+    $('#btnapp').on('click',function(){
+        $('.table-data').hide();
+        $('#btnhide').hide();
+        $('#btnshow').show();
+        $('#title-button').hide();
+        $('#form').show();      
+    });
+    $('.btnedit').click(function(event){
+        if (condition==0){
+            $(event.currentTarget).parent().children('button').attr('name',"editsubmit")
+            $(event.currentTarget).parent().parent().children().children(".id").attr('name',"currentid")
+            $(event.currentTarget).parent().parent().children().children(".cid").attr('name',"currentcid")
+            $(event.currentTarget).parent().parent().children().children(".name").attr("name","currentname")
+            $(event.currentTarget).parent().parent().children().children(".agent").attr("name","currentagent")
+            $(event.currentTarget).parent().parent().children().children(".time").attr("name","currenttime")
+            $(event.currentTarget).parent().parent().children().children(".date").attr("name","currentdate")
+            $(event.currentTarget).parent().parent().children().children("[id='notedit']").hide();
+            $(event.currentTarget).parent().parent().children().children("[id='edit']").show();
+            $('#editdone').show();
+            condition=1;
+        }
+    });
+    $('.btndel').click(function(event){
+        $(event.currentTarget).parent().parent().children().children(".id").attr('name',"currentid")
+    });
+});

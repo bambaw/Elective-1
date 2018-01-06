@@ -1,0 +1,36 @@
+.form-appoint , #title-button{
+    width: 25%;
+    padding: 15px;
+    margin: 0 auto;
+}
+.msg {
+    margin: 30px auto; 
+    padding: 10px; 
+    border-radius: 5px; 
+    color: #3c763d; 
+    background: #dff0d8; 
+    border: 1px solid #3c763d;
+    width: 50%;
+    text-align: center;
+}
+#btnhide {
+    display:none;
+}
+#title-button {
+    display:none;
+}
+.table-data {
+    width: 75%;
+    padding: 15px;
+    margin: 0 auto;
+    display:none;
+}
+#editdone {
+    display:none;
+}
+#edit{
+    display:none;
+}
+#hidden {
+    display:none;
+}
